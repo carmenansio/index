@@ -81,6 +81,7 @@ body {
     right: 0;
     box-shadow: 0 1px 10px rgba(0,0,0,0.1);
     max-width: 100%;
+    padding-right: 120px;
 }
 
 .row.navbar.nav-up {
@@ -446,6 +447,11 @@ body:not(.user-is-tabbing) a:focus {
 @media(max-width: 500px) {
     .header {
         text-align: center;
+    }
+
+    .header__text {
+        padding: 20px;
+        left: 0;
     }
 
     .header__text p {
