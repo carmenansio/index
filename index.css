@@ -647,6 +647,11 @@ body:not(.user-is-tabbing) a:focus {
     height: 4rem;
 }
 
+.footer__social-image:hover {
+    opacity: .7;
+    cursor: pointer;
+}
+
 .footer__github-buttons {
     display: flex;
     justify-content: center;
