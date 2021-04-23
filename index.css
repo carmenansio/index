@@ -629,6 +629,48 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 /* --------------------------------------- */
+/* ----- figma ----- */
+/* --------------------------------------- */
+
+.fof__content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+img.fof__photo {
+    opacity: 0.5;
+    margin-top: var(--gutter-medium);
+}
+
+img.fof__photo:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+@media(max-width: 900px) {
+    .fof__content {
+        flex-direction: column;
+        align-items: initial;
+    }
+}
+
+.fof__photo-container {
+    margin-bottom: var(--gutter-normal);
+}
+
+@media(min-width: 901px) {
+    .fof__text {
+        flex: 1;
+        margin: 0 var(--gutter-huge) 0 0;
+    }
+    
+    .fof__photo-container {
+        flex: 0 0 24%;
+    }
+}
+
+/* --------------------------------------- */
 /* ----- Footer ----- */
 /* --------------------------------------- */
 
