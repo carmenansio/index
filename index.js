@@ -1,43 +1,37 @@
-/* -----------------------------------------
-  Have focus outline only for keyboard users 
- ---------------------------------------- */
+var didScroll;
+var lastScrollTop = 0;
+var delta = 5;
+var navbarHeight = jQuery('.navbar').outerHeight();
 
-const handleFirstTab = (e) => {
-  if(e.key === 'Tab') {
-    document.body.classList.add('user-is-tabbing')
-
-    window.removeEventListener('keydown', handleFirstTab)
-    window.addEventListener('mousedown', handleMouseDownOnce)
-  }
-
-}
-
-const handleMouseDownOnce = () => {
-  document.body.classList.remove('user-is-tabbing')
-
-  window.removeEventListener('mousedown', handleMouseDownOnce)
-  window.addEventListener('keydown', handleFirstTab)
-}
-
-window.addEventListener('keydown', handleFirstTab)
-
-const backToTopButton = document.querySelector(".back-to-top");
-let isBackToTopRendered = false;
-
-let alterStyles = (isBackToTopRendered) => {
-  backToTopButton.style.visibility = isBackToTopRendered ? "visible" : "hidden";
-  backToTopButton.style.opacity = isBackToTopRendered ? 1 : 0;
-  backToTopButton.style.transform = isBackToTopRendered
-    ? "scale(1)"
-    : "scale(0)";
-};
-
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 700) {
-    isBackToTopRendered = true;
-    alterStyles(isBackToTopRendered);
-  } else {
-    isBackToTopRendered = false;
-    alterStyles(isBackToTopRendered);
-  }
+jQuery(window).scroll(function (event) {
+  didScroll = true;
 });
+
+setInterval(function () {
+  if (didScroll) {
+    hasScrolled();
+    didScroll = false;
+  }
+}, 250);
+
+function hasScrolled() {
+  var st = jQuery(this).scrollTop();
+
+  
+  if (Math.abs(lastScrollTop - st) <= delta)
+    return;
+
+  if (st > lastScrollTop && st > navbarHeight) {
+    
+    jQuery('.navbar').removeClass('nav-down').addClass('nav-up');
+  } else {
+    
+    if (st + jQuery(window).height() < jQuery(document).height()) {
+      jQuery('.navbar').removeClass('nav-up').addClass('nav-down');
+    }
+  } if ( jQuery(window).scrollTop() == 0 ) {
+    jQuery('.navbar').removeClass('nav-up').removeClass('nav-down');
+  }
+
+  lastScrollTop = st;
+}
