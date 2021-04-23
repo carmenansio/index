@@ -211,7 +211,7 @@ a {
     outline: 2px solid transparent;
 }
 
-a:hover {
+a:hover:not(.btn) {
     cursor: pointer;
     color: var(--pink);
 }
