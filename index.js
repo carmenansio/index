@@ -35,3 +35,15 @@ function hasScrolled() {
 
   lastScrollTop = st;
 }
+
+$('input').change(function(){
+  var $this = $(this), $div = $('div.navbar');
+  if( $this.is(':checked') )
+  {
+    $div.addClass('overlay');
+  }
+  else
+  {
+    $div.removeClass('overlay');
+  }
+}).change();
