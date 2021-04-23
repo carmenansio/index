@@ -635,7 +635,11 @@ body:not(.user-is-tabbing) a:focus {
 .fof__content {
     display: flex;
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
+}
+
+.fof h2 {
+    margin-bottom: 0;
 }
 
 img.fof__photo {
@@ -653,10 +657,6 @@ img.fof__photo:hover {
         flex-direction: column;
         align-items: initial;
     }
-}
-
-.fof__photo-container {
-    margin-bottom: var(--gutter-normal);
 }
 
 @media(min-width: 901px) {
