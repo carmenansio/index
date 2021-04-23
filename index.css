@@ -78,7 +78,7 @@ body {
     }
 }
 
-@media(max-width: 1240px) {
+@media(max-width: 2560px) {
     .row {
         padding: 0 var(--gutter-medium);
     }
