@@ -188,7 +188,7 @@ a {
 
 a:hover:not(.btn) {
     cursor: pointer;
-    color: var(--pink);
+    color: var(--white);
 }
 
 ::-moz-focus-inner {
@@ -562,7 +562,7 @@ body:not(.user-is-tabbing) a:focus {
 }
 
 .speaking__box:not(:last-child) {
-    margin-bottom: 25rem;
+    margin-bottom: 10rem;
 }
 
 @media(max-width: 500px) {
