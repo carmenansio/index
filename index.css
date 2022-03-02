@@ -1,11 +1,13 @@
 /* --------------------------------------- */
+
+
 /* ----- Basic Setup ----- */
+
+
 /* --------------------------------------- */
 
 @import url('https://fonts.googleapis.com/css2?family=Orelega+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
-
-
 * {
     margin: 0;
     padding: 0;
@@ -21,32 +23,27 @@
     --font-size-huge: 7.5rem;
     --font-stack: 'Raleway', sans-serif;
     --font-heading: 'Orelega One', sans-serif;
-
     --line-height-normal: 1.7;
     --line-height-small: 1.2;
-
     --black: #000;
     --pink: #ff3258;
     --white: #f0e9f2;
     --white-1: #e5e5e6da;
-
-
     --container-max-width: 1180px;
     --container-normal-width: 800px;
-    --container-medium-width: 700px; 
+    --container-medium-width: 700px;
     --container-small-width: 500px;
-
     --gutter-huge: 12rem;
     --gutter-medium: 6rem;
     --gutter-normal: 3rem;
     --gutter-small-1: 2.5rem;
     --gutter-small: 2rem;
-
     --border-light: 1px solid rgb(36, 35, 35);
 }
 
 html {
-    font-size: 62.5%; /* (16/10)*100 = 62.5% => 1rem = 10px */
+    font-size: 62.5%;
+    /* (16/10)*100 = 62.5% => 1rem = 10px */
     box-sizing: border-box;
     scroll-behavior: smooth;
 }
@@ -106,8 +103,13 @@ img {
     max-width: 100%;
 }
 
+
 /* --------------------------------------- */
+
+
 /* ----- Headlines and Paragraphs ----- */
+
+
 /* --------------------------------------- */
 
 h1,
@@ -154,11 +156,9 @@ h3 {
     .heading-primary {
         font-size: var(--font-size-large);
     }
-
     h2 {
         font-size: var(--font-size-medium-1);
     }
-
     h3 {
         font-size: var(--font-size-medium);
     }
@@ -169,13 +169,18 @@ p {
 }
 
 @media(max-width: 900px) {
-    p { 
+    p {
         max-width: var(--container-small-width);
     }
 }
 
+
 /* --------------------------------------- */
+
+
 /* ----- Buttons and Links ----- */
+
+
 /* --------------------------------------- */
 
 a {
@@ -215,7 +220,7 @@ body:not(.user-is-tabbing) a:focus {
     padding: 1rem 4.2rem;
     text-decoration: none;
     color: inherit;
-    border: 1px solid  var(--pink);
+    border: 1px solid var(--pink);
     border-radius: 30px;
     font-weight: 400;
 }
@@ -295,6 +300,7 @@ body:not(.user-is-tabbing) a:focus {
     font-family: var(--font-stack);
 }
 
+
 /* ----- Back to Top ----- */
 
 .back-to-top {
@@ -329,8 +335,13 @@ body:not(.user-is-tabbing) a:focus {
     }
 }
 
+
 /* --------------------------------------- */
+
+
 /* ----- Navbar and hamburguer ----- */
+
+
 /* --------------------------------------- */
 
 .nav {
@@ -349,23 +360,23 @@ body:not(.user-is-tabbing) a:focus {
     font-size: 3rem;
     opacity: 0;
     z-index: 99;
-  }
+}
 
-  .nav__button {
-      opacity: 1;
-  }
-  
-  .nav__button-checkbox:checked ~ nav.nav {
+.nav__button {
+    opacity: 1;
+}
+
+.nav__button-checkbox:checked~nav.nav {
     display: block;
     position: relative;
     font-size: var(--font-size-huge);
-  }
+}
 
-  .nav__item {
+.nav__item {
     display: block;
-  }
+}
 
-  .overlay {
+.overlay {
     position: fixed;
     width: 100%;
     height: 100%;
@@ -373,19 +384,19 @@ body:not(.user-is-tabbing) a:focus {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0,0,0,0.9);
+    background-color: rgba(0, 0, 0, 0.9);
     z-index: 2;
     transition: 0.5s;
-  }
+}
 
-  .overlay a {
+.overlay a {
     text-decoration: none;
     transition: 0.3s;
-  }
+}
 
-  .overlay .nav__items {
-      margin-top: 3rem;
-  }
+.overlay .nav__items {
+    margin-top: 3rem;
+}
 
 @media(max-width: 500px) {
     .nav {
@@ -399,12 +410,11 @@ body:not(.user-is-tabbing) a:focus {
     }
 }
 
-@media(min-width: 400px) {   
+@media(min-width: 400px) {
     .nav__button,
     .nav__button-checkbox {
         display: none;
     }
-
     .nav__link {
         position: relative;
         display: inline-block;
@@ -413,7 +423,6 @@ body:not(.user-is-tabbing) a:focus {
         color: inherit;
         transition: all .2s;
     }
-
     .nav__link::after {
         content: '';
         position: absolute;
@@ -425,34 +434,28 @@ body:not(.user-is-tabbing) a:focus {
         background: var(--white);
         transition: all 0.25s cubic-bezier(1, 0.68, 0.16, 0.9);
     }
-
     .nav__link:hover {
         color: var(--pink);
     }
-
     .nav__link:hover::after {
         right: 0;
         height: 2px;
         background: var(--pink);
     }
-
     .nav {
         display: flex;
         justify-content: flex-end;
     }
-    
     .nav__items {
         display: flex;
         list-style: none;
     }
-    
     .nav__item:not(:last-child) {
         margin-right: var(--gutter-medium);
     }
-    
     .navbar {
         transition: all .1s ease;
-        background: rgba(0,0,0,.3);
+        background: rgba(0, 0, 0, .3);
         position: fixed;
         top: 0;
         left: 0;
@@ -460,7 +463,6 @@ body:not(.user-is-tabbing) a:focus {
         box-shadow: 0 1px 10px rgb(0 0 0 / 10%);
         max-width: 100%;
     }
-
     .row.navbar.nav-down {
         position: fixed;
         top: 0;
@@ -474,13 +476,17 @@ body:not(.user-is-tabbing) a:focus {
     }
 }
 
+
 /* --------------------------------------- */
+
+
 /* ----- Header ----- */
+
+
 /* --------------------------------------- */
 
 .header {
-    background: linear-gradient(rgba(0,0,0, .1), rgba(0,0,0, .4)), 
-        url('./images/header.jpg');
+    background: linear-gradient(rgba(0, 0, 0, .1), rgba(0, 0, 0, .4)), url('./images/header.jpg');
     height: 100vh;
     background-size: cover;
     background-position: center;
@@ -505,12 +511,10 @@ body:not(.user-is-tabbing) a:focus {
     .header {
         text-align: center;
     }
-
     .header__text {
         padding: 20px;
         left: 0;
     }
-
     .header__text p {
         transform: scale(.8);
     }
@@ -518,22 +522,26 @@ body:not(.user-is-tabbing) a:focus {
 
 
 /* --------------------------------------- */
+
+
 /* ----- intro web hand ----- */
+
+
 /* --------------------------------------- */
 
 @keyframes waveHand {
     0% {
-       transform: rotate(7deg);
+        transform: rotate(7deg);
     }
     50% {
-       transform: rotate(-7deg); 
+        transform: rotate(-7deg);
     }
     100% {
-       transform: rotate(7deg);
+        transform: rotate(7deg);
     }
-  }
-  
-  .wave {
+}
+
+.wave {
     transition: 1.5s ease;
     display: inline-block;
     animation-name: waveHand;
@@ -541,12 +549,16 @@ body:not(.user-is-tabbing) a:focus {
     animation-duration: 1.3s;
     animation-timing-function: ease;
     transform-origin: 90% 80%;
-    opacity:  1;
-  }
+    opacity: 1;
+}
 
 
 /* --------------------------------------- */
+
+
 /* ----- speaking ----- */
+
+
 /* --------------------------------------- */
 
 .speaking__box {
@@ -614,8 +626,13 @@ body:not(.user-is-tabbing) a:focus {
     }
 }
 
+
 /* --------------------------------------- */
+
+
 /* ----- experience ----- */
+
+
 /* --------------------------------------- */
 
 .client__logos {
@@ -634,14 +651,18 @@ body:not(.user-is-tabbing) a:focus {
         overflow-x: scroll;
         padding: var(--gutter-normal);
     }
-
     .client__logo:not(:last-of-type) {
         margin-right: var(--gutter-medium);
     }
 }
 
+
 /* --------------------------------------- */
+
+
 /* ----- bio ----- */
+
+
 /* --------------------------------------- */
 
 .bio__content {
@@ -665,65 +686,85 @@ body:not(.user-is-tabbing) a:focus {
     .bio__text {
         flex: 0 0 46%;
     }
-    
     .bio__photo-container {
         flex: 1;
         margin: 0 var(--gutter-huge) 0 0;
     }
 }
 
+
 /* --------------------------------------- */
+
+
 /* ----- Contact ----- */
+
+
 /* --------------------------------------- */
 
 .contact__info {
     max-width: var(--container-medium-width);
 }
 
-/* --------------------------------------- */
-/* ----- figma ----- */
+
 /* --------------------------------------- */
 
-.fof__content {
+
+/* ----- gde and figma ----- */
+
+
+/* --------------------------------------- */
+
+.fof__content,
+.gde__content {
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
-.fof h2 {
+.fof h2,
+.gde h2 {
     margin-bottom: 0;
 }
 
-img.fof__photo {
+img.fof__photo,
+img.gde__photo {
     opacity: 0.5;
     margin-top: var(--gutter-medium);
 }
 
-img.fof__photo:hover {
+img.fof__photo:hover,
+img.gde__photo:hover {
     opacity: 1;
     cursor: pointer;
 }
 
 @media(max-width: 900px) {
-    .fof__content {
+    .fof__content,
+    .gde__content {
         flex-direction: column;
         align-items: initial;
     }
 }
 
 @media(min-width: 901px) {
-    .fof__text {
+    .fof__text,
+    .gde__text {
         flex: 1;
         margin: 0 var(--gutter-huge) 0 0;
     }
-    
-    .fof__photo-container {
+    .fof__photo-container,
+    .gde__photo-container {
         flex: 0 0 24%;
     }
 }
 
+
 /* --------------------------------------- */
+
+
 /* ----- Footer ----- */
+
+
 /* --------------------------------------- */
 
 .footer {
@@ -765,5 +806,5 @@ img.fof__photo:hover {
 @media(max-width: 500px) {
     .footer {
         padding: var(--gutter-medium) 0;
-    } 
+    }
 }
