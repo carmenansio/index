@@ -644,10 +644,10 @@ body:not(.user-is-tabbing) a:focus {
 .client__logo {
     height: 6.5rem;
     max-width: 18rem;
+}
 
-    &.holaluz {
-        max-width: 12rem;
-    }
+.holaluz {
+    max-width: 12rem;
 }
 
 @media(max-width: 1240px) {
