@@ -682,6 +682,11 @@ body:not(.user-is-tabbing) a:focus {
     align-items: center;
 }
 
+.bridge {
+    font-weight: 400;
+    font-family: var(--font-heading);
+}
+
 @media(max-width: 900px) {
     .bio__content {
         flex-direction: column-reverse;
