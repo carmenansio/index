@@ -556,72 +556,72 @@ body:not(.user-is-tabbing) a:focus {
 /* --------------------------------------- */
 
 
-/* ----- speaking ----- */
+/* ----- content ----- */
 
 
 /* --------------------------------------- */
 
-.speaking__box {
+.content__box {
     display: flex;
     align-items: center;
 }
 
 @media(max-width: 900px) {
-    .speaking__box {
+    .content__box {
         align-items: initial;
         flex-direction: column-reverse;
     }
 }
 
-.speaking__box:not(:last-child) {
+.content__box:not(:last-child) {
     margin-bottom: 10rem;
 }
 
 @media(max-width: 500px) {
-    .speaking__box:not(:last-child) {
+    .content__box:not(:last-child) {
         margin-bottom: 20rem;
     }
 }
 
-.speaking__links {
+.content__links {
     display: flex;
     align-items: center;
 }
 
-.speaking__text {
+.content__text {
     flex: 0 0 30%;
 }
 
-.speaking__list {
+.content__list {
     /* list-style-type: square; */
     list-style-position: inside;
     margin-bottom: var(--gutter-normal);
 }
 
-.speaking__code {
+.content__code {
     display: block;
     height: 3rem;
     margin-left: var(--gutter-normal);
     transition: all .3s;
 }
 
-.speaking__code:hover {
+.content__code:hover {
     transform: scale(1.2);
 }
 
-.speaking__image-box {
+.content__image-box {
     margin-bottom: var(--gutter-normal);
 }
 
 @media(min-width: 901px) {
-    .speaking__image-box {
+    .content__image-box {
         flex: 1;
         margin: 0 0 0 10rem;
     }
 }
 
 @media(max-width: 900px) {
-    .speaking__code {
+    .content__code {
         height: 4rem;
     }
 }
@@ -636,9 +636,16 @@ body:not(.user-is-tabbing) a:focus {
 /* --------------------------------------- */
 
 .client__logos {
-    display: flex;
-    justify-content: space-between;
     filter: invert(100%) grayscale(100%) opacity(.8);
+
+    ul {
+        list-style: none;
+        --auto-grid-min-size: 20rem;
+        display: grid;
+        grid-gap: 2rem;
+        grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
+        justify-items: center;
+    }
 }
 
 .client__logo {
