@@ -103,6 +103,9 @@ img {
     max-width: 100%;
 }
 
+img.bio__photo {
+    filter: grayscale(1);
+}
 
 /* --------------------------------------- */
 
@@ -752,6 +755,10 @@ img.fof__photo:hover,
 img.gde__photo:hover {
     opacity: 1;
     cursor: pointer;
+}
+
+img.gde__photo {
+    filter: grayscale(1);
 }
 
 @media(max-width: 900px) {
